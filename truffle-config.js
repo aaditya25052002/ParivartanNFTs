@@ -1,13 +1,16 @@
 // require('babel-register')
 // require('babel-polyfill')
-require("dotenv").config();
+require("dotenv").config({ path: ".env" });
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const private_key = "0a5cf65340aea3fe96c399015310d177a99d7af101bea43fdde5441d0f1e529b";
-const provider = new HDWalletProvider(
-  private_key,
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const provider_goerli = new HDWalletProvider(
+  PRIVATE_KEY,
   "https://goerli.infura.io/v3/526830d66ec045c0898a67fed0e1e4ea"
 );
-
+const provider_polygon = new HDWalletProvider(
+  PRIVATE_KEY,
+  "https://polygon-mumbai.infura.io/v3/0dbd40565a024d958a3483a3bae852f6"
+);
 module.exports = {
   // Configure networks (Localhost, Rinkeby, etc.)
   networks: {
@@ -17,12 +20,17 @@ module.exports = {
       network_id: "*", // Match any network id
     },
     goerli: {
-      provider: provider,
+      provider: provider_goerli,
       network_id: 5,
       gas: 5500000,
       confirmations: 2, // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
+    },
+    mumbaimatic: {
+      provider: provider_polygon,
+      network_id: 80001,
+      confirmations: 2,
     },
     // mumbaimatic: {
     //   provider: provider,

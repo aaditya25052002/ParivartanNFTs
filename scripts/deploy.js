@@ -1,19 +1,24 @@
+require("dotenv").config({ path: ".env" });
+
 async function main() {
   const [deployer, feeAccount] = await ethers.getSigners();
 
   console.log("Deploying contracts with the account:", deployer.address);
   console.log("Assigning Fee Account with:", feeAccount.address);
   console.log("Deployer balance:", (await deployer.getBalance()).toString());
-  console.log("FeeAccount balance:", (await feeAccount.getBalance()).toString());
+  console.log(
+    "FeeAccount balance:",
+    (await feeAccount.getBalance()).toString()
+  );
 
   // Get the ContractFactories and Signers here.
   const Store = await ethers.getContractFactory("Store");
 
   // deploy contracts
-  const store = await Store.deploy('Freshers', feeAccount, 10);
+  const store = await Store.deploy("Freshers", feeAccount, 10);
 
   // Save copies of each contracts abi and address to the frontend.
-  saveFrontendUtils(store , "Store");
+  saveFrontendUtils(store, "Store");
 }
 
 function saveFrontendUtils(contract, name) {
@@ -39,7 +44,7 @@ function saveFrontendUtils(contract, name) {
 
 main()
   .then(() => process.exit(0))
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
     process.exit(1);
   });
