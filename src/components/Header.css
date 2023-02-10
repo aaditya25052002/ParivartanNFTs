@@ -1,7 +1,8 @@
 .navbarr{
     font-family: "Baloo Bhai 2", sans-serif;
     font-weight: 600;
-    -webkit-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     position: fixed;
     left: 10%;
     top: 0;
