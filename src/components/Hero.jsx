@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       className="flex flex-col md:flex-row w-4/5 justify-between 
-      items-center mx-auto py-10"
+      items-center mx-auto py-10 pt-20"
     >
       <div className="md:w-3/6 w-full">
         <div>
@@ -28,7 +28,7 @@ const Hero = () => {
           <button
             className="shadow-xl shadow-black text-white
             bg-[#e32970] hover:bg-[#bd255f]
-            rounded-full cursor-pointer p-2"
+            rounded-full cursor-pointer p-2 font-bold"
             onClick={onCreatedNFT}
           >
             Create NFT
