@@ -56,7 +56,7 @@ const Hero = () => {
       mt-10 md:mt-0 rounded-md overflow-hidden bg-gray-800"
       >
         <img
-          src="https://images.cointelegraph.com/images/1434_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjEtMDYvNGE4NmNmOWQtODM2Mi00YmVhLThiMzctZDEyODAxNjUxZTE1LmpwZWc=.jpg"
+          src="https://indianartideas.in/articleimages/1594635252indian%20art.png"
           alt="NFT Art"
           className="h-60 w-full object-cover"
         />
