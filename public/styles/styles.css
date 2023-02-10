@@ -11,8 +11,8 @@
 =============== */
 .chatbox {
     font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-    font-size: 100%;
+    font-weight: 200;
+    font-size: 12px;
     position: fixed;
     bottom: 5px;
     right: 30px;
@@ -27,8 +27,8 @@
     transition: all .5s ease-in-out;
 
     background: #f9f9f9;
-    height: 350px;
-    width: 300px;
+    height: 425px;
+    width: 320px;
     border-radius: 20px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);    
 }
