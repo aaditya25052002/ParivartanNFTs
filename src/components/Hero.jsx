@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       className="flex flex-col md:flex-row w-4/5 justify-between 
-      items-center mx-auto py-10"
+      items-center mx-auto py-10 pt-20"
     >
       <div className="md:w-3/6 w-full">
         <div>
@@ -28,7 +28,7 @@ const Hero = () => {
           <button
             className="shadow-xl shadow-black text-white
             bg-[#e32970] hover:bg-[#bd255f]
-            rounded-full cursor-pointer p-2"
+            rounded-full cursor-pointer p-2 font-bold"
             onClick={onCreatedNFT}
           >
             Create NFT
@@ -56,7 +56,7 @@ const Hero = () => {
       mt-10 md:mt-0 rounded-md overflow-hidden bg-gray-800"
       >
         <img
-          src="https://images.cointelegraph.com/images/1434_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjEtMDYvNGE4NmNmOWQtODM2Mi00YmVhLThiMzctZDEyODAxNjUxZTE1LmpwZWc=.jpg"
+          src="https://indianartideas.in/articleimages/1594635252indian%20art.png"
           alt="NFT Art"
           className="h-60 w-full object-cover"
         />
