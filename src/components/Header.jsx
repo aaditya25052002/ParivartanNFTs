@@ -1,4 +1,4 @@
-import timelessLogo from '../assets/timeless.png'
+import timelessLogo from '../assets/PARIVARTRAN.png'
 import { connectWallet } from '../Blockchain.Services'
 import { useGlobalState, truncate } from '../store'
 

@@ -3,6 +3,7 @@ import { setGlobalState, useGlobalState, truncate } from '../store'
 
 const Hero = () => {
   const [connectedAccount] = useGlobalState('connectedAccount')
+  const [nfts] = useGlobalState('nfts')
   const onCreatedNFT = () => {
     setGlobalState('modal', 'scale-100')
   }
@@ -40,7 +41,7 @@ const Hero = () => {
             <small className="text-gray-300">User</small>
           </div>
           <div>
-            <p className="text-white font-bold">152k</p>
+            <p className="text-white font-bold">{nfts.length}</p>
             <small className="text-gray-300">Artwork</small>
           </div>
           <div>
